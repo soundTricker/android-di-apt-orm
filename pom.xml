@@ -37,6 +37,11 @@
 			<version>2.2</version>
 			<classifier>api</classifier>
 		</dependency>
+		<dependency>
+			<groupId>com.j256.ormlite</groupId>
+			<artifactId>ormlite-android</artifactId>
+			<version>4.31</version>
+		</dependency>
 	</dependencies>
 
 	<build>
