@@ -21,6 +21,7 @@ public class HelloApplication extends RoboApplication {
 
 		@Override
 		protected void configure() {
+			
 			bind(HelloService.class).to(HelloServiceImpl.class);
 		}
 		
