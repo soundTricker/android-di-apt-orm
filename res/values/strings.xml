@@ -2,4 +2,5 @@
 <resources>
     <string name="hello">Hello maven-test!</string>
     <string name="app_name">maven-test</string>
+    <string name="add_account">addAccount</string>
 </resources>

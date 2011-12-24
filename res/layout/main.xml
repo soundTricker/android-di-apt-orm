@@ -17,4 +17,45 @@
     android:layout_height="wrap_content"
     android:text="Button" />
 
+<EditText
+    android:id="@+id/account_name"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <requestFocus />
+</EditText>
+
+<LinearLayout
+    android:id="@+id/linearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <Button
+        android:id="@+id/addAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_account" />
+
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/linearLayout2"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <Spinner
+        android:id="@+id/account_ids"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/deleteAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Button" />
+
+</LinearLayout>
+
 </LinearLayout>
