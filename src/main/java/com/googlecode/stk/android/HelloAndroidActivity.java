@@ -10,6 +10,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.common.base.Strings;
 import com.google.inject.Inject;
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.Click;
@@ -63,6 +64,13 @@ public class HelloAndroidActivity extends Activity {
 
 	@Click
 	void addAccount() {
+		String name = accountName.getText().toString();
+		
+		if(Strings.isNullOrEmpty(name)) {
+			Toast.makeText(this, "account name is empty", Toast.LENGTH_SHORT).show();
+			return;
+		}
+		
 		helloService.createAccount(accountName.getText().toString());
 		reloadAccountIds();
 	}

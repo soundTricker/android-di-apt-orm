@@ -44,7 +44,7 @@
 			<artifactId>ormlite-android</artifactId>
 			<version>4.31</version>
 		</dependency>
-		<dependency>
+<!-- 		<dependency>
 			<groupId>com.pivotallabs</groupId>
 			<artifactId>robolectric</artifactId>
 			<type>jar</type>
@@ -63,6 +63,7 @@
 			<version>1.2.1</version>
 			<scope>test</scope>
 		</dependency>
+ -->
 	</dependencies>
 
 	<build>
