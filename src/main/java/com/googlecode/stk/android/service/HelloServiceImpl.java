@@ -10,9 +10,7 @@ import android.util.Log;
 
 import com.google.inject.Inject;
 import com.googlecode.stk.android.R;
-import com.googlecode.stk.android.db.DatabaseHelper;
-import com.googlecode.stk.android.entity.Account;
-import com.j256.ormlite.android.apptools.OpenHelperManager;
+import com.googlecode.stk.android.db.entity.Account;
 import com.j256.ormlite.dao.Dao;
 
 
@@ -23,36 +21,18 @@ public class HelloServiceImpl implements HelloService{
 	@InjectResource(R.string.hello)
 	String hello;
 
-	private DatabaseHelper helper;
-
+	@Inject
 	private Dao<Account, Integer> accountDao;
 	
 	@Inject
 	public HelloServiceImpl(Context context) {
 		this.context = context;
-		
-		helper = OpenHelperManager.getHelper(context, DatabaseHelper.class);
-		
-		try {
-			accountDao = helper.getDao(Account.class);
-		} catch (SQLException e) {
-			Ln.e(e , "Can't create dao");
-			throw new RuntimeException(e);
-		}
 	}
 
 	@Override
 	public String hello() {
 		Log.i("HelloServiceImpl", hello);
 		return hello + " call";
-	}
-
-	@Override
-	public void destroy() {
-		if(helper != null) {
-			OpenHelperManager.releaseHelper();
-			helper = null;
-		}
 	}
 
 	@Override
